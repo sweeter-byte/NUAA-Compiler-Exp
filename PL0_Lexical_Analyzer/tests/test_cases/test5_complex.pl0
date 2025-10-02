@@ -1,0 +1,30 @@
+program complex;
+const
+    max := 100,
+    min := 1;
+var x, y, z, sum;
+
+procedure add;
+begin
+    sum := x + y
+end;
+
+begin
+    x := 0;
+    sum := 0;
+    
+    while x < max do
+    begin
+        if odd x then
+            sum := sum + x;
+        x := x + 1
+    end;
+    
+    write(sum);
+    
+    read(y, z);
+    if y > z then
+        call add
+    else
+        write(y)
+end.

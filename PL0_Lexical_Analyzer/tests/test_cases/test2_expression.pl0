@@ -1,0 +1,12 @@
+program expr_test;
+var a, b, c, result;
+begin
+    a := 10;
+    b := 20;
+    c := 5;
+    result := (a + b) * c - 100;
+    if result > 0 then
+        write(result)
+    else
+        write(0)
+end.

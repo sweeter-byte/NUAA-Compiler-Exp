@@ -1,0 +1,13 @@
+program proc_test;
+var x, y, z;
+
+procedure multiply;
+begin
+    z := x * y
+end;
+
+begin
+    read(x, y);
+    call multiply;
+    write(z)
+end.

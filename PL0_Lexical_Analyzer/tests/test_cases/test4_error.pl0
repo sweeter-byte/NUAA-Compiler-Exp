@@ -1,0 +1,6 @@
+program error_test;
+var 123abc, x;
+begin
+    x : 10;
+    y := 20abc
+end.
