@@ -1,0 +1,49 @@
+================================================================================
+PL/0 Lexical Analysis Results
+================================================================================
+
+Index  Line   Column Type            Value               
+--------------------------------------------------------------------------------
+1      4      1      PROGRAM         program             
+2      4      9      ID              error               
+3      4      14     ERROR           _                   
+4      4      15     ID              test                
+5      4      19     SEMICOLON       ;                   
+6      5      1      VAR             var                 
+7      5      5      ERROR           123abc              
+8      5      11     COMMA           ,                   
+9      5      13     ID              x                   
+10     5      14     SEMICOLON       ;                   
+11     6      1      BEGIN           begin               
+12     7      5      ID              x                   
+13     7      7      ERROR           :                   
+14     7      9      INT             10                  
+15     7      11     SEMICOLON       ;                   
+16     8      5      ID              y                   
+17     8      7      ASSIGN          :=                  
+18     8      10     ERROR           20abc               
+19     8      15     SEMICOLON       ;                   
+20     9      5      ERROR           @                   
+21     9      7      ASSIGN          :=                  
+22     9      10     INT             30                  
+23     9      12     SEMICOLON       ;                   
+24     10     5      ID              z                   
+25     10     7      ASSIGN          :=                  
+26     10     10     INT             40                  
+27     11     1      END             end                 
+28     11     4      ERROR           .                   
+
+================================================================================
+
+Error List:
+--------------------------------------------------------------------------------
+Lexical error (line 4, column 14): Illegal character: '_'
+Lexical error (line 5, column 5): Letter cannot directly follow a number: 123abc
+Lexical error (line 7, column 7): Illegal character ':', expected ':='
+Lexical error (line 8, column 10): Letter cannot directly follow a number: 20abc
+Lexical error (line 9, column 5): Illegal character: '@'
+Lexical error (line 11, column 4): Illegal character: '.'
+
+Found 6 errors in total.
+
+================================================================================

@@ -1,30 +1,60 @@
+{test5_complex.pl0 - Complex Comprehensive Test}
+{Test: Complete PL/0 program, including all syntax elements}
+
 program complex;
 const
     max := 100,
-    min := 1;
-var x, y, z, sum;
+    min := 1,
+    step := 2;
+var x, y, z, sum, count;
 
-procedure add;
+procedure init;
 begin
-    sum := x + y
+    x := 0;
+    y := 0;
+    sum := 0;
+    count := 0
+end;
+
+procedure calculate;
+var temp;
+begin
+    temp := x + y;
+    sum := sum + temp;
+    count := count + 1
 end;
 
 begin
-    x := 0;
-    sum := 0;
+    call init;
     
+    (* Main loop: Calculate the sum from 1 to max *)
+    x := min;
     while x < max do
     begin
         if odd x then
+        begin
             sum := sum + x;
-        x := x + 1
+            write(sum)
+        end;
+        x := x + step
     end;
     
-    write(sum);
-    
+    (* Read user input *)
     read(y, z);
+    
+    (* Conditional judgment and procedure call *)
     if y > z then
-        call add
+    begin
+        x := y;
+        y := z;
+        call calculate
+    end
     else
-        write(y)
-end.
+    begin
+        x := z;
+        call calculate
+    end;
+    
+    (* Output final result *)
+    write(sum, count)
+end

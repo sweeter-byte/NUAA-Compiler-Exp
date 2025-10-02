@@ -1,78 +1,76 @@
-# PL/0词法分析器
+# PL/0 Lexical Analyzer
 
-## 项目简介
-本项目实现了PL/0语言的词法分析器，按照编译原理教材P45-46的算法思想，使用循环分支方法完成。
+## Project Introduction
+This project implements a lexical analyzer for the PL/0 language, completed using the loop-branch method.
 
-## 功能特性
-- ✅ 识别15个关键字（program, const, var, procedure, begin, end, if, then, else, while, do, call, read, write, odd）
-- ✅ 识别标识符和整数常量
-- ✅ 识别所有运算符（+, -, *, /, =, <>, <, <=, >, >=）
-- ✅ 识别界符（(, ), ;, ,, :=）
-- ✅ 错误检测和精确定位（行号、列号）
-- ✅ 输出Token序列到中间文件
+## Functional Features
+- Recognizes 15 keywords (program, const, var, procedure, begin, end, if, then, else, while, do, call, read, write, odd)
+- Recognizes identifiers and integer constants
+- Recognizes all operators (+, -, *, /, =, <>, <, <=, >, >=)
+- Recognizes delimiters ((, ), ;, ,, :=)
+- Error detection and precise positioning (line number, column number)
+- Outputs token sequence to an intermediate file
 
-## 环境要求
-- Python 3.6+
-- 无需额外依赖包
+## Environment Requirements
+- Python 3.6 or higher
+- No additional dependency packages required
 
-## 运行方法
+## Running Method
 
-### 方式1：使用命令行参数
+### Method 1: Using Command Line Arguments
 ```bash
 cd src
 python main.py ../tests/test_cases/test1_basic.pl0
 ```
 
-### 方式2：交互式运行
+### Method 2: Interactive Execution
 ```bash
 cd src
 python main.py
-# 然后按提示输入文件路径
+# Then follow the prompts to enter the file path
 ```
 
-## 文件说明
-```
-├── README.md                   # 本文件
-├── docs/                       # 文档目录
-│   └── 实验报告.pdf           # 实验报告
-├── src/                        # 源代码
-│   ├── token_type.py          # Token类型定义
-│   ├── token.py               # Token类
-│   ├── lexer.py               # 词法分析器
-│   └── main.py                # 主程序
-├── tests/                      # 测试目录
-│   └── test_cases/            # 测试用例
-└── output/                     # 输出结果
+## File Description
+```text
+├── README.md                   # This file
+├── src/                        # Source code
+│   ├── token_type.py           # Token type definitions
+│   ├── token.py                # Token class
+│   ├── lexer.py                # Lexical analyzer
+│   └── main.py                 # Main program
+├── tests/                      # Test directory
+│   └── test_cases/             # Test cases
+└── output/                     # Output results
 ```
 
-## 测试用例
-- **test1_basic.pl0**: 基本功能测试
-- **test2_expression.pl0**: 表达式测试
-- **test3_procedure.pl0**: 过程声明测试
-- **test4_error.pl0**: 错误检测测试
-- **test5_complex.pl0**: 复杂程序测试
+## Test Cases
+- **test1_basic.pl0**: Basic functionality test
+- **test2_expression.pl0**: Expression test
+- **test3_procedure.pl0**: Procedure declaration test
+- **test4_error.pl0**: Error detection test
+- **test5_complex.pl0**: Complex program test
 
-## 输出格式
-词法分析器将生成包含以下信息的Token序列文件：
-- 序号
-- 行号
-- 列号
-- Token类型
-- Token值
+## Output Format
+The lexical analyzer will generate a token sequence file containing the following information:
+- Sequence number
+- Line number
+- Column number
+- Token type
+- Token value
 
-## 错误处理
-程序能检测以下词法错误：
-1. 非法字符
-2. 数字后直接跟字母
-3. 单独的冒号（应为:=）
-4. 注释未闭合
+## Error Handling
+The program can detect the following lexical errors:
+1. Illegal characters
+2. Letter immediately following a number
+3. Standalone colon (should be :=)
+4. Unclosed comment
 
-## 作者信息
-- 姓名：[你的姓名]
-- 学号：[你的学号]
-- 班级：[你的班级]
-- 日期：[日期]
+## Author Information
+- Name: Ran Maoyin
+- Student ID: 162350107
+- Class: 1623001
+- Date: October 2, 2025
 
-## 参考资料
-- 编译原理教材 P45-46页
-- PL/0语言BNF描述
+## References
+- Compiler Principles Textbook, pages 45-46
+- PL/0 Language BNF Description

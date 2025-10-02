@@ -1,3 +1,6 @@
+{test1_basic.pl0 - Basic Functionality Test}
+{Test: Basic syntax structure, keywords, identifiers, constants}
+
 program test1;
 const max := 100;
 var x, y, z;
@@ -5,4 +8,4 @@ begin
     x := 10;
     y := 20;
     z := x + y
-end.
+end

@@ -1,0 +1,84 @@
+================================================================================
+PL/0 Lexical Analysis Results
+================================================================================
+
+Index  Line   Column Type            Value               
+--------------------------------------------------------------------------------
+1      4      1      PROGRAM         program             
+2      4      9      ID              exprtest            
+3      4      17     SEMICOLON       ;                   
+4      5      1      VAR             var                 
+5      5      5      ID              a                   
+6      5      6      COMMA           ,                   
+7      5      8      ID              b                   
+8      5      9      COMMA           ,                   
+9      5      11     ID              c                   
+10     5      12     COMMA           ,                   
+11     5      14     ID              result              
+12     5      20     SEMICOLON       ;                   
+13     6      1      BEGIN           begin               
+14     7      5      ID              a                   
+15     7      7      ASSIGN          :=                  
+16     7      10     INT             10                  
+17     7      12     SEMICOLON       ;                   
+18     8      5      ID              b                   
+19     8      7      ASSIGN          :=                  
+20     8      10     INT             20                  
+21     8      12     SEMICOLON       ;                   
+22     9      5      ID              c                   
+23     9      7      ASSIGN          :=                  
+24     9      10     INT             5                   
+25     9      11     SEMICOLON       ;                   
+26     10     5      ID              result              
+27     10     12     ASSIGN          :=                  
+28     10     15     LPAREN          (                   
+29     10     16     ID              a                   
+30     10     18     PLUS            +                   
+31     10     20     ID              b                   
+32     10     21     RPAREN          )                   
+33     10     23     TIMES           *                   
+34     10     25     ID              c                   
+35     10     27     MINUS           -                   
+36     10     29     INT             100                 
+37     10     32     SEMICOLON       ;                   
+38     12     5      IF              if                  
+39     12     8      ID              result              
+40     12     15     GT              >                   
+41     12     17     INT             0                   
+42     12     19     THEN            then                
+43     13     9      WRITE           write               
+44     13     14     LPAREN          (                   
+45     13     15     ID              result              
+46     13     21     RPAREN          )                   
+47     14     5      ELSE            else                
+48     15     9      WRITE           write               
+49     15     14     LPAREN          (                   
+50     15     15     INT             0                   
+51     15     16     RPAREN          )                   
+52     15     17     SEMICOLON       ;                   
+53     17     5      IF              if                  
+54     17     8      ID              a                   
+55     17     10     NEQ             <>                  
+56     17     13     ID              b                   
+57     17     15     THEN            then                
+58     18     9      WRITE           write               
+59     18     14     LPAREN          (                   
+60     18     15     INT             1                   
+61     18     16     RPAREN          )                   
+62     18     17     SEMICOLON       ;                   
+63     20     5      IF              if                  
+64     20     8      ID              a                   
+65     20     10     LEQ             <=                  
+66     20     13     INT             100                 
+67     20     17     THEN            then                
+68     21     9      WRITE           write               
+69     21     14     LPAREN          (                   
+70     21     15     INT             2                   
+71     21     16     RPAREN          )                   
+72     22     1      END             end                 
+
+================================================================================
+
+Lexical analysis completed, no errors.
+
+================================================================================

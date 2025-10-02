@@ -1,0 +1,71 @@
+================================================================================
+PL/0 Lexical Analysis Results
+================================================================================
+
+Index  Line   Column Type            Value               
+--------------------------------------------------------------------------------
+1      4      1      PROGRAM         program             
+2      4      9      ID              proctest            
+3      4      17     SEMICOLON       ;                   
+4      5      1      VAR             var                 
+5      5      5      ID              x                   
+6      5      6      COMMA           ,                   
+7      5      8      ID              y                   
+8      5      9      COMMA           ,                   
+9      5      11     ID              z                   
+10     5      12     SEMICOLON       ;                   
+11     7      1      PROCEDURE       procedure           
+12     7      11     ID              multiply            
+13     7      19     SEMICOLON       ;                   
+14     8      1      BEGIN           begin               
+15     9      5      ID              z                   
+16     9      7      ASSIGN          :=                  
+17     9      10     ID              x                   
+18     9      12     TIMES           *                   
+19     9      14     ID              y                   
+20     10     1      END             end                 
+21     10     4      SEMICOLON       ;                   
+22     12     1      PROCEDURE       procedure           
+23     12     11     ID              add                 
+24     12     14     SEMICOLON       ;                   
+25     13     1      VAR             var                 
+26     13     5      ID              temp                
+27     13     9      SEMICOLON       ;                   
+28     14     1      BEGIN           begin               
+29     15     5      ID              temp                
+30     15     10     ASSIGN          :=                  
+31     15     13     ID              x                   
+32     15     15     PLUS            +                   
+33     15     17     ID              y                   
+34     15     18     SEMICOLON       ;                   
+35     16     5      WRITE           write               
+36     16     10     LPAREN          (                   
+37     16     11     ID              temp                
+38     16     15     RPAREN          )                   
+39     17     1      END             end                 
+40     17     4      SEMICOLON       ;                   
+41     19     1      BEGIN           begin               
+42     20     5      READ            read                
+43     20     9      LPAREN          (                   
+44     20     10     ID              x                   
+45     20     11     COMMA           ,                   
+46     20     13     ID              y                   
+47     20     14     RPAREN          )                   
+48     20     15     SEMICOLON       ;                   
+49     21     5      CALL            call                
+50     21     10     ID              multiply            
+51     21     18     SEMICOLON       ;                   
+52     22     5      WRITE           write               
+53     22     10     LPAREN          (                   
+54     22     11     ID              z                   
+55     22     12     RPAREN          )                   
+56     22     13     SEMICOLON       ;                   
+57     23     5      CALL            call                
+58     23     10     ID              add                 
+59     24     1      END             end                 
+
+================================================================================
+
+Lexical analysis completed, no errors.
+
+================================================================================

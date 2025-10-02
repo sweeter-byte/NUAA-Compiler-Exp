@@ -5,7 +5,7 @@ __pycache__/
 *.so
 .Python
 
-# 输出文件
+# Output file
 output/*.txt
 !output/.gitkeep
 
@@ -19,6 +19,6 @@ output/*.txt
 .DS_Store
 Thumbs.db
 
-# 文档
+# docs
 docs/*.pdf
 !docs/.gitkeep

@@ -1,12 +1,22 @@
-program expr_test;
+{test2_expression.pl0 - Expression Test}
+{Test: Arithmetic expressions, relational operators, parentheses}
+
+program exprtest;
 var a, b, c, result;
 begin
     a := 10;
     b := 20;
     c := 5;
     result := (a + b) * c - 100;
+    
     if result > 0 then
         write(result)
     else
-        write(0)
-end.
+        write(0);
+    
+    if a <> b then
+        write(1);
+    
+    if a <= 100 then
+        write(2)
+end

@@ -1,6 +1,11 @@
-program error_test;
-var 123abc, x;
+{test4_error.pl0 - Error Detection Test}
+{Test: Detection capability for various lexical errors}
+
+program error_test; { Error: <id> cannot contain '_' }
+var 123abc, x;  { Error: Identifier starting with a digit }
 begin
-    x : 10;
-    y := 20abc
-end.
+    x : 10;     { Error: Standalone colon, should be := }
+    y := 20abc; { Error: Letter following a number }
+    @ := 30;    { Error: Illegal character @ }
+    z := 40
+end.            { Error: '.' after end }
